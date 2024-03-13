@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}{{ job.title }} - Job Details{%
+endblock %} {% block content %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ job.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ job.company }}</h6>
+    <p class="card-text">{{ job.description }}</p>
+    <p class="card-text">Location: {{ job.location }}</p>
+    <p class="card-text">Salary: {{ job.salary }}</p>
+  </div>
+</div>
+{% endblock %}

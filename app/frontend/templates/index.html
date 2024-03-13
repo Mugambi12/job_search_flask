@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}Job Listings{% endblock %} {% block
+content %}
+<h1 class="mb-4">Job Listings</h1>
+<div class="list-group">
+  {% for job in jobs %}
+  <a
+    href="{{ url_for('jobs.job_details', job_id=job.id) }}"
+    class="list-group-item list-group-item-action"
+  >
+    <h5 class="mb-1">{{ job.title }}</h5>
+    <p class="mb-1">{{ job.company }}</p>
+    <small>{{ job.location }}</small>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}
